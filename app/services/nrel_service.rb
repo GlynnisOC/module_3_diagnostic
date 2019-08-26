@@ -9,6 +9,8 @@ class NrelService
       f.headers["radius"] = ["6.0"]
       f.adapter Faraday.default_adapter
     end
-    binding.pry
+    response = connection.get('/fuel_type')
+    JSON.parse(response.body, symbolize_names: true)
+    # binding.pry
   end
 end
