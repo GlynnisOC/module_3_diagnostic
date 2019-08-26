@@ -9,7 +9,9 @@ feature 'User can visit root page' do
     click_on 'Locate'
 
     expect(current_path).to eq('/search')
+    expect(page).to have_content "Search Results"
 
+    expect(page).to_not have_content("hydrogen")
     expect((".stations").count).to eq 10
   end
 end
