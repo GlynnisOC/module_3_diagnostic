@@ -1,8 +1,9 @@
 class SearchFacade
 
   def stations
-    @_stations ||= stations.map { |station| Station.new(station)}
+    service = NrelService.new
+    service.stations(10)
   end
 
-  
+
 end
