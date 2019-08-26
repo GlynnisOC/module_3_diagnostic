@@ -4,7 +4,6 @@ feature 'User can visit root page' do
   scenario "and search for alternate fuel" do
     zip = 80203
     visit '/'
-    # save_and_open_page
 
     fill_in :q, with: zip
     click_on 'Locate'
